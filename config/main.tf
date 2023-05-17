@@ -2,7 +2,7 @@ module "vpc" {
   source = "../modules/VPC"
   cidr = var.cidr_vpc
 }
-#co
+
 # module "subnet" {
 #   source = "../modules/SUBNET"
 #   vpc_id = module.vpc.vpc-id
