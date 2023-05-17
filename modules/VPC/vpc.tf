@@ -9,16 +9,16 @@ resource "aws_vpc" "main" {
     }
 }
 
-resource "aws_internet_gateway" "main-gw" {
-    vpc_id = aws_vpc.main.id
-    tags = {
-        Name = "${aws_vpc.main.id}-internet-gw"
-    }
-}
+# resource "aws_internet_gateway" "main-gw" {
+#     vpc_id = aws_vpc.main.id
+#     tags = {
+#         Name = "${aws_vpc.main.id}-internet-gw"
+#     }
+# }
 
 output "vpc-id" {
   value = aws_vpc.main.id
 }
-output "igw-id" {
-  value = aws_internet_gateway.main-gw.id
-}
+# output "igw-id" {
+#   value = aws_internet_gateway.main-gw.id
+# }
