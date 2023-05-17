@@ -3,4 +3,6 @@ version: 0.2
 phases:
   build:
     commands:
+      - cd config/
+      - terraform init
       - terraform apply -auto-approve
